@@ -1,0 +1,43 @@
+### Class 1 ###
+
+
+### Opening a file in R 
+
+## We will be using the here and rio packages
+## We first need to install these two packages. However this needs to be done only once. Copy the code below to do this 
+
+# Note that a "#" in R basically tells R - "This is a comment, do not run this as code". Please remove the # below and run the command if you are using this package for the first time.
+
+# install.packages("rio")
+# install.packages("here")
+# install.packages("googlesheets4")
+
+# The function "install.packages" installs a new "package" on R. This needs to be done only the first time. 
+
+# The function "library" loads the package into the workspace. So by typing library(rio) we are loading the rio library onto the present workspace. We will also load the "here" package using library(here). Do not worry about what these are at the moment. 
+
+library(rio)
+library(here)
+library(googlesheets4)
+
+## Opening a .csv file
+df_1 <- import(here("data", "age_sex_data.csv"))
+
+## what we are essentially doing here is using rio's import function. We are telling it to look at the RProj working directory, go to the folder called "data" and then open the file "age_se_data.csv)
+
+
+
+## Opening an excel file
+df_2 <- import(here("data","age_sex_data.xlsx"), which = "Sheet 1")
+## same as above but we are also specifying the sheet name in case there are multiple sheets in the same workbook.
+
+
+## Opening directly from google sheet
+df_3 <- read_sheet("https://docs.google.com/spreadsheets/d/17tzZZtNubWRZTWyUR_HLGfTMC8jTmuPShgP-3RMnsCI/edit#gid=0")
+
+## This is a very handy function where data is pulled directly from google sheets. So any changes in those values will reflect immediately in any analysis that is done. This code should take you to your browser where you will need to login to your gmail. Please do this. Also remember to tick the box that asks for permssion to edit or modify sheets. 
+
+
+
+
+

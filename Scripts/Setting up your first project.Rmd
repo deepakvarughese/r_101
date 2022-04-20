@@ -1,0 +1,47 @@
+---
+title: "Create your first R Project"
+author: "Dr Deepak Varughese, MD"
+date: "3/28/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+
+Now that you have R and R Studio installed let is start our first ever R Project. 
+
+In R we have different kind of files. R Scripts - which is kind of the most commonly used file, R Markdown - which is used to create reports (which is what this document you are reading was written in btw) and R Projects. 
+
+R Projects are R Studio's way to keep your files organized. It is not mandatory to use but it sure is helpful
+
+We will do this 1 time setup today. 
+
+### Step 1: 
+First up, let us go out of R and into your computers file explorer
+
+### Step 2: 
+Go to a place on your drive " for example your C or D drive and create a new folder called "R Working Folder"
+
+### Step 3: 
+Now open up R Studio and go to "File" ---->  New Project ---------------> New Directory -----------> New Project ----------> In directory name fill in R_classes_2022 and in the directory below select the location of the "R Working Folder" you just created in step 2. 
+
+### Step 4: 
+Now browse to the R Working Directory you created in Step 2 using Windows File Explorer. Within this folder you should now see a newly created folder called R_classes_2022. Go inside this folder and create 3 new folders -------> Data, Outputs and Scripts (Please notice the capitalized first letter and that all the other letters are small)
+
+### Step 5: 
+Now go into the "Data" folder and paste into it the 2 files age_sex_data.csv and age_sex_data.xlsx that were sent to you
+
+### Step 6: 
+Close R Studio
+
+### Step 7: 
+Open R Studio and go to Open Projects and open the file R_classes_2022.RProj
+
+Congratulations!! You have opened your first R Project
+
+
+
+
+

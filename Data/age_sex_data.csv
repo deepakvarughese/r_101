@@ -1,0 +1,51 @@
+age,Gender,State,SES,Score 1,Score 2 
+24,male,Kerala,low,5,6
+29,female,kerala,low,7,6
+15,female,krla,low,7,6
+19,female,KL,low,7,6
+24,male,kl,low,7,6
+21,female,kerala,medium,7,6
+11,female,TN,medium,7,6
+28,male,Kerala,medium,5,6
+17,female,Tamil Nadu,medium,7,6
+20,female,krla,medium,7,6
+19,female,KL,medium,7,6
+19,male,kl,medium,7,6
+15,male,KL,medium,7,6
+17,male,krla,High,5,6
+16,male,KL,High,7,6
+26,female,kl,High,7,6
+25,female,KL,High,5,6
+20,female,Kerala,High,7,6
+16,male,kl,High,8,6
+22,female,KL,High,8,6
+24,female,Kerala,High,5,6
+23,male,kerala,High,8,6
+23,male,KL,low,,7
+12,male,kl,low,,7
+23,female,KL,low,6,7
+25,female,Kerala,low,6,7
+21,male,Tamil Nadu,medium,8,7
+22,female,kerala,medium,8,7
+20,male,KL,medium,8,7
+18,male,kl,medium,8,7
+22,female,Kerala,High,8,7
+31,female,kerala,High,8,7
+21,female,kerala,High,7,7
+19,male,krla,High,7,7
+17,female,KL,High,6,7
+18,female,kl,High,6,7
+12,male,KL,High,5,7
+25,male,Kerala,High,6,7
+20,male,kerala,High,6,7
+17,female,krla,High,6,7
+23,male,KL,low,5,8
+14,female,Kerala,low,5,8
+18,male,kerala,low,5,8
+20,female,krla,low,,8
+17,female,KL,High,6,8
+21,male,KL,medium,7,A
+19,female,kl,medium,7,A
+19,female,KL,medium,7,A
+17,male,krla,medium,8,
+24,female,tamizh nadu,medium,8,
