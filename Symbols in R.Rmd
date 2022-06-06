@@ -1,0 +1,71 @@
+---
+title: "Symbols in R"
+author: "Dr Deepak Varughese, MD"
+date: '2022-05-17'
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## The Operator Symbol "\<- "
+
+\<- This symbol is an assignment operator. That is to say that with an assignment operator the value on the left is assigned the value on the right. For example if i say -
+
+```{r_code_1}
+ x <- 7 + 13 
+```
+
+This means that x now gets the value 20. If i put x anywhere else in my script it will use that value. You may wonder now why on earth putting x would be useful. However when you start coding you will realize that it becomes an effective way of saying "add these two numbers" and then do this.
+
+```{r}
+ 
+#test1
+studentA_test1 <- 5                  #marks scored by student A in test 1
+studentB_test1 <- 10                 #marks scored by student B in test 2
+
+mean_test1 <- (studentA_test1 + studentB_test1) / 2  #average marks scored in test1
+mean_test1
+
+#test2
+studentA_test2 <-7                    #marks scored by student A in test 1
+studentB_test2 <- 9                   #marks scored bt student B in test 2 
+
+mean_test2 <- (studentA_test2 + studentB_test2)/2 #average marks scored in test2
+mean_test2
+
+overall_mean <-(mean_test1 + mean_test2) / 2        # average of both means
+overall_mean
+
+
+```
+
+\_
+
+In the above example we define marks got by 2 students , (Student A and Student B) in two tests. We assigned the first value to an "object" called "studentA_test1" and the second number to an "object" called "studentB_test1". We could then do different calculations based on those labels / objects. The advantage of this is that merely changing the values assigned (5 and 10 in the above example) we can actually repeat that whole assignment with different numbers. ie you dont actually need the "number" to write the analysis. You can very well start writing the code with "variable names" and then update the numbers later. This makes the code re-usable. Especially in situations where you get a similar dataset every month and need to run the same analysis monthly.
+
+Note: The above given example is a terrible way to actually calculate mean. A much simpler way would be to use a dataframe and the mean() function. However , the point of the above example was to show the functionality of the \<- symbol.
+
+Another way to do it would be
+
+```{r}
+name <- c("Student_A", "Student_B") #creating a column with the names of the student
+test_1 <- c(5,10) #creating a column with the values of the marks scored in test1 
+test_2 <- c(7,9)  #creating a column with the values of the marks scored in test2
+
+
+df1 <-  data.frame(name, test_1,test_2)       #converting to dataframe
+df1
+mean1 <- mean(df1$test_1)                     #mean of test1
+mean2 <- mean(df1$test_2)                     #mean of test2
+
+overall_mean <- mean(mean1,mean2)             #average of both means
+
+mean1 
+mean2
+overall_mean
+
+```

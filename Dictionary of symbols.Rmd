@@ -1,0 +1,95 @@
+---
+title: "Dictionary of symbols"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## The following is a quick dictionary of some of the symbols and jargon you may see while reading reference material in R
+
++----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+| Symbol   | Meaning in English                                                                                                                                                                                    | Shortcut     |
++==========+=======================================================================================================================================================================================================+==============+
+| **\<-**  | **Assignment Operator.\                                                                                                                                                                               | Alt +        |
+|          | **\                                                                                                                                                                                                   |              |
+|          | The value on the right will be assigned the value on the left going forward,                                                                                                                          |              |
+|          |                                                                                                                                                                                                       |              |
+|          | **Code**                                                                                                                                                                                              |              |
+|          |                                                                                                                                                                                                       |              |
+|          | x \<- 32                                                                                                                                                                                              |              |
+|          |                                                                                                                                                                                                       |              |
+|          | ***English** : Assign the number 32 to the character x . Hereafter if i say x read this as 32.*                                                                                                       |              |
+|          |                                                                                                                                                                                                       |              |
+|          | Another common use of the \<- operator is to assign the names of dataframes (similar to tables)\                                                                                                      |              |
+|          |                                                                                                                                                                                                       |              |
+|          | **Code**\                                                                                                                                                                                             |              |
+|          | df1 \<- read.csv(xyz.csv) %\>% filter(state == "TN")                                                                                                                                                  |              |
+|          |                                                                                                                                                                                                       |              |
+|          | **English** *: open the file xyz.csv . assign it to the label df1. If i say df1 i am referring to this file.*                                                                                         |              |
++----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+| **%\>%** | **Pipe Operator**                                                                                                                                                                                     | Ctrl Shift M |
+|          |                                                                                                                                                                                                       |              |
+|          | it can be read as "And then" in plain english                                                                                                                                                         |              |
+|          |                                                                                                                                                                                                       |              |
+|          | df1 \<- read.csv("xyz.csv") %\>% filter(state == "TN")                                                                                                                                                |              |
+|          |                                                                                                                                                                                                       |              |
+|          | **English** *: open the file xyz.csv . assign it the name df1 and then only show me the rows where state is TN.*                                                                                      |              |
++----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+| **\#**   | **Comment**                                                                                                                                                                                           | \#           |
+|          |                                                                                                                                                                                                       |              |
+|          | Starting a line with a comment tells R *"This is not code it is a comment , do not run this line"*.                                                                                                   |              |
+|          |                                                                                                                                                                                                       |              |
+|          | Using comments is a very good practice to lay out what exactly you are doing at each step. You can also use comments to be headings and create sections in your code. This keeps things easy to read. |              |
++----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+| **\$**   | The \$ symbol is sometimes used to refer to a column name.\                                                                                                                                           |              |
+|          | \                                                                                                                                                                                                     |              |
+|          | Suppose a dataframe (table) called "df1" has 4 columns. id_number . state, name, age.                                                                                                                 |              |
+|          |                                                                                                                                                                                                       |              |
+|          | These 4 columns will be referred to in R as                                                                                                                                                           |              |
+|          |                                                                                                                                                                                                       |              |
+|          | df1\$id_number                                                                                                                                                                                        |              |
+|          |                                                                                                                                                                                                       |              |
+|          | df1\$state                                                                                                                                                                                            |              |
+|          |                                                                                                                                                                                                       |              |
+|          | df1\$name                                                                                                                                                                                             |              |
+|          |                                                                                                                                                                                                       |              |
+|          | df1\$age                                                                                                                                                                                              |              |
+|          |                                                                                                                                                                                                       |              |
+|          | Any further action that needs to be taken on these columns will refer to these columns as such.                                                                                                       |              |
++----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+| "...."   | "...."                                                                                                                                                                                                |              |
+|          |                                                                                                                                                                                                       |              |
+|          | Putting text in quotes tells R :"Treat this as text / string / character". This refers to the data type.                                                                                              |              |
+|          |                                                                                                                                                                                                       |              |
+|          | So saying                                                                                                                                                                                             |              |
+|          |                                                                                                                                                                                                       |              |
+|          | x \<- 12                                                                                                                                                                                              |              |
+|          |                                                                                                                                                                                                       |              |
+|          | \# 12 stored as an integer. Mathematical functions will be possible                                                                                                                                   |              |
+|          |                                                                                                                                                                                                       |              |
+|          | x \<- "12"                                                                                                                                                                                            |              |
+|          |                                                                                                                                                                                                       |              |
+|          | \# 12 stored as a character / string. Mathematical functions will not be possible,                                                                                                                    |              |
+|          |                                                                                                                                                                                                       |              |
+|          | " ..." is used at all places where a new name is introduced to R. Hence when we open a file for the first time we use                                                                                 |              |
+|          |                                                                                                                                                                                                       |              |
+|          | read.csv("xyz.csv")                                                                                                                                                                                   |              |
+|          |                                                                                                                                                                                                       |              |
+|          | or                                                                                                                                                                                                    |              |
+|          |                                                                                                                                                                                                       |              |
+|          | install.packages("tidyverse")                                                                                                                                                                         |              |
++----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+| (...)    | (..) is used very commonly following a function.                                                                                                                                                      |              |
+|          |                                                                                                                                                                                                       |              |
+|          | Such as                                                                                                                                                                                               |              |
+|          |                                                                                                                                                                                                       |              |
+|          | read.csv() \# to open files                                                                                                                                                                           |              |
+|          |                                                                                                                                                                                                       |              |
+|          | library() \# to load libraries                                                                                                                                                                        |              |
+|          |                                                                                                                                                                                                       |              |
+|          | the file to be read or the package to be loaded goes into the (). This value that is entered into the (..) is often referred to as an "argument".                                                     |              |
++----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
